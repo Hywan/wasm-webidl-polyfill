@@ -252,7 +252,7 @@ function polyfill(module, imports, getExports) {
       const bytes = [];
       while (true) {
         const byte = readByte();
-        bytes.push(byte & 0x7f);
+        bytes.push(byte);
         if (!(byte & 0x80)) {
           break;
         }

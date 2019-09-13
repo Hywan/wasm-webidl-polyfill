@@ -386,7 +386,7 @@ function polyfill(module, imports, getExports) {
         };
       } else if (opcode === 0x0c) { // get-field
         debugIndent('get-field');
-        const ty = readLEB();
+        const ty = readType();
         debug('ty =', ty);
         const field = readLEB();
         debug('field =', field);
